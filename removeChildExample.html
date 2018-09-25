@@ -1,0 +1,29 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ol>
+      <li>Trump</li>
+      <li>Putin</li>
+      <li>Segawa</li>
+      <li>Jordan</li>
+    </ol>
+    <select id="heaven">
+      <option value="0">Trump</option>
+      <option value="1">Putin</option>
+      <option value="2">Segawa</option>
+      <option value="3">Jordan</option>
+    </select>
+    <button onclick="removeItem()">Send people to Heaven</button>
+
+    <script>
+    function removeItem(){
+      var heaven = document.getElementById('heaven').value;
+      var Grab = document.getElementsByTagName('li')[heaven];
+      var From = Grab.parentNode;
+      From.removeChild(Grab);
+    }
+    </script>
+  </body>
+</html>
